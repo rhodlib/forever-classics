@@ -93,10 +93,10 @@ export default function CocktailCarousel({ cocktails }) {
         onMouseMove={onMouseMove}
       >
         {/* Ghost item al inicio */}
-        <div class="carousel-item snap-center shrink-0 w-[45vw] sm:w-[32vw] lg:w-[20vw]" aria-hidden="true"></div>
+        <div class="carousel-item snap-center shrink-0 w-[260px] sm:w-[280px] lg:w-[300px]" aria-hidden="true"></div>
         {cocktails.map((c, i) => (
           <div
-            class={`carousel-item snap-center shrink-0 w-[45vw] sm:w-[32vw] lg:w-[20vw] transition-transform duration-300 ease-in-out ${activeIndex === i ? 'scale-105 z-30 neon-border' : 'scale-95 opacity-60'}`}
+            class={`carousel-item snap-center shrink-0 w-[260px] sm:w-[280px] lg:w-[300px] transition-transform duration-300 ease-in-out ${activeIndex === i ? 'scale-105 z-30 neon-border' : 'scale-95 opacity-60'}`}
             data-index={i}
             key={c.name}
           >
@@ -139,7 +139,7 @@ export default function CocktailCarousel({ cocktails }) {
           </div>
         ))}
         {/* Ghost item al final (ancho extra para centrar el último) */}
-        <div class="carousel-item snap-center shrink-0 w-[60vw] sm:w-[45vw] lg:w-[28vw]" aria-hidden="true"></div>
+        <div class="carousel-item snap-center shrink-0 w-[260px] sm:w-[280px] lg:w-[300px]" aria-hidden="true"></div>
       </div>
       {/* Modal */}
       {modalIndex !== null && (
@@ -154,7 +154,7 @@ export default function CocktailCarousel({ cocktails }) {
               <span class="sr-only">Cerrar</span>
               &times;
             </button>
-            <img src={cocktails[modalIndex].image} alt={cocktails[modalIndex].name} class="w-full h-64 object-contain rounded-lg mb-4 bg-black" />
+            <img src={cocktails[modalIndex].image} alt={cocktails[modalIndex].name} class="w-full h-40 sm:h-56 lg:h-64 object-contain rounded-lg mb-4 bg-black" />
             <div class="flex-1 flex flex-col justify-between">
               <div>
                 <h2 class="text-2xl font-bold mb-2">{cocktails[modalIndex].name}</h2>
