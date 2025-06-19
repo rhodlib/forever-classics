@@ -1,6 +1,6 @@
 # 🍸 ForeverClassics
 
-Un proyecto frontend desarrollado con **Astro** y **TailwindCSS**, que implementa un carrusel horizontal de tarjetas para representar cócteles clásicos con animación de giro (flip-card) y scroll infinito simulado. Cada tarjeta incluye imagen, descripción, receta, preparación e historia del cóctel.
+Un proyecto frontend desarrollado con **Astro** y **TailwindCSS**, que implementa un carrusel horizontal de tarjetas para representar cócteles clásicos. El carrusel es totalmente responsive, con animaciones suaves, borde neón en la card activa y el modal, badges de "Recomendado" para cócteles destacados, y lógica robusta para centrado y selección de tarjetas.
 
 ---
 
@@ -8,9 +8,21 @@ Un proyecto frontend desarrollado con **Astro** y **TailwindCSS**, que implement
 
 - **Astro** — Framework frontend optimizado para performance
 - **TailwindCSS** — Utilizado para estilos utilitarios rápidos y responsive
-- **Vanilla JS** — Lógica de scroll, flipping y centrado de tarjetas
-- **Looped Array** — Técnica de duplicado de extremos para scroll infinito sin límites visibles
-- **CSS personalizado** — Flip 3D con `transform-style: preserve-3d` y `backface-visibility`
+- **Preact** — Lógica de scroll, centrado y modal en el carrusel
+- **CSS personalizado** — Borde neón, animaciones y estilos visuales
+
+---
+
+## ✨ Características del Carrusel
+
+- **Carrusel horizontal con scroll suave y drag**
+- **Card activa y modal con borde neón animado**
+- **Badge "Recomendado"** para Negroni y Old Fashioned
+- **Responsive**: se adapta a cualquier pantalla
+- **Más padding y gap** para mejor visualización
+- **Centrado automático del primer cóctel** al cargar
+- **Selección robusta de la card central** (incluye lógica para que la primera card sea seleccionable)
+- **Modal con receta, preparación e historia**
 
 ---
 

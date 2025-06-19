@@ -1,1 +1,19 @@
 @import "tailwindcss";
+
+.neon {
+    color: #fff;
+    text-shadow:
+        0 0 5px #fff,
+        0 0 10px #ff00cc,
+        0 0 20px #ff00cc,
+        0 0 40px #ff00cc;
+}
+
+.neon-border {
+  border: 2px solid #ff00cc;
+  border-radius: 1rem;
+  box-shadow:
+    0 0 8px #ff00cc,
+    0 0 16px #ff00cc,
+    0 0 32px #ff00cc;
+}

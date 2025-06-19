@@ -1,5 +1,6 @@
 ---
-import CocktailCarousel from '../components/CocktailCarousel.astro';
+import CocktailCarousel from '../components/CocktailCarousel.jsx';
+import { cocktails } from '../data/cocktails.js';
 import Layout from '../layouts/Layout.astro';
 import "../styles/global.css";
 
@@ -8,5 +9,16 @@ import "../styles/global.css";
 ---
 
 <Layout>
-	<CocktailCarousel />
+	<header class="text-center py-4 z-10">
+		<h1 class="text-4xl font-extrabold neon drop-shadow-md">
+			Forever Classics 🍸
+		</h1>
+	</header>
+	<CocktailCarousel client:only="preact" cocktails={cocktails} />
+	<footer class="text-center text-gray-500 text-sm py-6">
+		&copy; 2025 &middot; Creado por <a
+			href="https://rhodlib.com"
+			class="underline hover:text-white"
+			target="_blank">rhodlib</a>
+	</footer>
 </Layout>
